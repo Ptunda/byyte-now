@@ -1,0 +1,146 @@
+@startuml
+
+@startuml
+interface ICustomizable {
++void customize()
+}
+abstract class MenuItem {
+String name
+double price
+
++MenuItem(String name, double price)
++String getName()
++double getPrice()
++abstract void displayDetails()
+
+}
+
+class Sauces extends Topping{
++Sauces(String name, double price)
+
+}
+
+class Sides extends MenuItem{
++Sides(String name, double price)
+}
+
+abstract class Topping extends MenuItem {
+String name
+double price
+boolean isPremium
+boolean isExtra
++Topping(String name, double price)
++abstract boolean isPremium()
++abstract boolean isExtra()
++abstract void displayDetails()
+}
+
+abstract class Report {
++abstract void generate()
+}
+
+class Order {
+int orderID
+Customer customer
+List<Sandwich> sandwiches
+List<Drink> drinks
+List<Chip> chips
+
++Order(int orderID, Customer customer)
++void addSandwich(Sandwich sandwich)
++void addDrink(Drink drink)
++void addChip(Chip chip)
++double calculateTotal()
++void generateReceipt()
+}
+
+class Sandwich extends MenuItem implements ICustomizable {
+String size
+String breadType
+List<Topping> toppings
+boolean isToasted
+
++Sandwich(String name, double price, String size, String breadType, boolean isToasted)
++void customize()
++ void addTopping(Topping topping)
++double calculatePrice()
++void displayDetails()
+}
+
+class Meat extends Topping {
++Meat(String name, double price)
++boolean isPremium()
++boolean isExtra()
++void displayDetails()
+}
+
+class Cheese extends Topping {
++Cheese(String name, double price)
++boolean isPremium()
++boolean isExtra()
++void displayDetails()
+}
+
+class RegularTopping extends Topping {
++RegularTopping(String name, double price)
++boolean isPremium()
++boolean isExtra()
++void displayDetails()
+}
+
+class Drink extends MenuItem {
+String size
+
++Drink(String name, double price, String size)
++void displayDetails()
+}
+
+class Chip extends MenuItem {
++Chip(String name, double price)
++void displayDetails()
+}
+
+class Customer {
+String name
+String contactInfo
+
++Customer(String name, String contactInfo)
++String getName()
++String getContactInfo()
+}
+
+class Receipt {
+Order order
+
++Receipt(Order order)
++void generateFile()
+}
+
+class SalesReport extends Report {
++void generate()
+}
+
+class Menu {
+List<Sandwich> sandwiches
+List<Drink> drinks
+List<Chip> chips
+List<Topping> toppings
+
++ Menu()
++void updatePrices()
++List<Sandwich> getSandwiches()
++List<Drink> getDrinks()
++List<Chip> getChips()
+List<Topping> getToppings()
+}
+
+class DatabaseManager {
++void saveOrder(Order order)
++Menu loadMenu()
++Order retrieveOrder(int orderID)
+}
+
+
+@enduml
+
+@enduml
