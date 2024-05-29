@@ -19,7 +19,6 @@ class Sandwich #DEB887 extends MenuItem{
 -isToasted: boolean
 
 +Sandwich(name: String, size: String, breadType: String, isToasted: boolean)
-+customize(): void
 +addTopping(Topping topping): void
 +calculatePrice(): double
 +displayDetails(): void

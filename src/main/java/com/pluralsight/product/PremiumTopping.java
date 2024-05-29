@@ -10,6 +10,7 @@ public class PremiumTopping extends Topping {
         super(name, toppingType, isExtra);
         this.sandwichSize = sandwichSize;
 
+
         setPrice(toppingType, sandwichSize);
 
     }
