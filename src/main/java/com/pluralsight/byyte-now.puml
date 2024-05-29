@@ -73,12 +73,14 @@ class RegularTopping #FF7F50 extends Topping {
 class Sauces #91A3B0 extends RegularTopping{
 
 +Sauces(name: String, toppingType: String, isExtra: boolean)
++displayDetails():void
 
 }
 
 class Sides #91A3B0 extends RegularTopping{
 
 +Sides(name: String, toppingType: String, isExtra: boolean)
++displayDetails(): void
 }
 
 

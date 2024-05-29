@@ -3,7 +3,9 @@ package com.pluralsight.product;
 public class RegularTopping extends Topping {
 
     public RegularTopping(String name, String toppingType, boolean isExtra) {
+
         super(name, toppingType, isExtra);
+
     }
 
     @Override
