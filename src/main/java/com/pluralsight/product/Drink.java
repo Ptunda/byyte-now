@@ -2,7 +2,7 @@ package com.pluralsight.product;
 
 public class Drink extends MenuItem{
 
-    private String size;
+    private final String size;
     private double price;
 
     public Drink(String name, String size) {

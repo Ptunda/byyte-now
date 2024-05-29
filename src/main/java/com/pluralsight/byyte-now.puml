@@ -33,13 +33,19 @@ abstract class Topping #F0E68C extends MenuItem {
 
 class Drink #00FFFF extends MenuItem {
 -size: String
+-price: double
 
 +Drink(name: String, size: String)
++getSize(): String
++getPrice(): double
 +displayDetails(): void
 }
 
 class Chip #FFDAB9 extends MenuItem {
+-price: double
+
 +Chip(name: String)
++getPrice(): double
 +displayDetails(): void
 }
 
