@@ -1,113 +1,108 @@
 @startuml
+package com.pluralsight{
 
-@startuml
-interface ICustomizable {
-+void customize()
-}
-abstract class MenuItem {
-String name
-double price
+package com.pluralsight.product{
 
-+MenuItem(String name, double price)
-+String getName()
-+double getPrice()
-+abstract void displayDetails()
+abstract class MenuItem #lightblue{
+-name: String
+-price: double
 
-}
-
-class Sauces extends Topping{
-+Sauces(String name, double price)
++MenuItem(name: String, price: double)
++getName(): String
++getPrice(): double
++{abstract} displayDetails(): void
 
 }
 
-class Sides extends MenuItem{
-+Sides(String name, double price)
+class Sandwich #DEB887 extends MenuItem{
+-size: String
+-breadType: String
+-toppings: List<Topping>
+-isToasted: boolean
+
++Sandwich(name: String, price: double, size: String, breadType: String, isToasted: boolean)
++customize(): void
++addTopping(Topping topping): void
++calculatePrice(): double
++displayDetails(): void
 }
 
-abstract class Topping extends MenuItem {
-String name
-double price
-boolean isPremium
-boolean isExtra
-+Topping(String name, double price)
-+abstract boolean isPremium()
-+abstract boolean isExtra()
-+abstract void displayDetails()
+abstract class Topping #F0E68C extends MenuItem {
+-toppingType: String
++Topping(name: String, price: double, toppingType: String)
++{abstract} displayDetails(): void
+}
+
+class Drink #00FFFF extends MenuItem {
+-size: String
+
++Drink(name: String, price: double, size: String)
++displayDetails(): void
+}
+
+class Chip #FFDAB9 extends MenuItem {
++Chip(name: String, price: double)
++displayDetails(): void
+}
+
+
+class PremiumTopping #FF7F50 extends Topping {
+-isExtra: boolean
++PremiumTopping(name: String, price: double, toppingType: String)
++isExtra(): boolean
++displayDetails(): void
+}
+
+class RegularTopping #FF7F50 extends Topping {
+-isExtra: boolean
++RegularTopping(name: String, price: double, toppingType: String, isExtra: boolean)
++displayDetails(): void
+}
+
+class Sauces #91A3B0 extends RegularTopping{
+
++Sauces(name: String, price: double, toppingType: String, isExtra: boolean)
+
+}
+
+class Sides #91A3B0 extends RegularTopping{
+
++Sides(name: String, price: double, toppingType: String, isExtra: boolean)
+}
+
+
+}
+
+package com.pluralsight.service{
+
+class Order #FFB6C1 {
+-orderID: int
+-customer: Customer
+-sandwiches: List<Sandwich>
+-drinks: List<Drink>
+-chips: List<Chip>
+
++Order(orderID: int, customer: Customer)
++addSandwich(Sandwich sandwich): void
++addDrink(Drink drink): void
++addChip(Chip chip): void
++calculateTotal(): double
++generateReceipt(): void
+}
+
+class Customer #FFD700{
+-name: String
+-contactInfo: String
+
++Customer(name: String, contactInfo: String)
++getName(): String
++getContactInfo(): String
 }
 
 abstract class Report {
 +abstract void generate()
 }
 
-class Order {
-int orderID
-Customer customer
-List<Sandwich> sandwiches
-List<Drink> drinks
-List<Chip> chips
-
-+Order(int orderID, Customer customer)
-+void addSandwich(Sandwich sandwich)
-+void addDrink(Drink drink)
-+void addChip(Chip chip)
-+double calculateTotal()
-+void generateReceipt()
-}
-
-class Sandwich extends MenuItem implements ICustomizable {
-String size
-String breadType
-List<Topping> toppings
-boolean isToasted
-
-+Sandwich(String name, double price, String size, String breadType, boolean isToasted)
-+void customize()
-+ void addTopping(Topping topping)
-+double calculatePrice()
-+void displayDetails()
-}
-
-class Meat extends Topping {
-+Meat(String name, double price)
-+boolean isPremium()
-+boolean isExtra()
-+void displayDetails()
-}
-
-class Cheese extends Topping {
-+Cheese(String name, double price)
-+boolean isPremium()
-+boolean isExtra()
-+void displayDetails()
-}
-
-class RegularTopping extends Topping {
-+RegularTopping(String name, double price)
-+boolean isPremium()
-+boolean isExtra()
-+void displayDetails()
-}
-
-class Drink extends MenuItem {
-String size
-
-+Drink(String name, double price, String size)
-+void displayDetails()
-}
-
-class Chip extends MenuItem {
-+Chip(String name, double price)
-+void displayDetails()
-}
-
-class Customer {
-String name
-String contactInfo
-
-+Customer(String name, String contactInfo)
-+String getName()
-+String getContactInfo()
-}
 
 class Receipt {
 Order order
@@ -135,12 +130,15 @@ List<Topping> getToppings()
 }
 
 class DatabaseManager {
-+void saveOrder(Order order)
++saveOrder(Order order): void
 +Menu loadMenu()
 +Order retrieveOrder(int orderID)
 }
 
 
-@enduml
+}
+
+}
+
 
 @enduml
