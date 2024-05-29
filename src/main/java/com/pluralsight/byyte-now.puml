@@ -27,8 +27,10 @@ class Sandwich #DEB887 extends MenuItem{
 
 abstract class Topping #F0E68C extends MenuItem {
 -toppingType: String
-+Topping(name: String, toppingType: String)
+-isExtra: boolean
++Topping(name: String, toppingType: String, isExtra: boolean)
 +getToppingType(): String
++isExtra(): boolean
 +{abstract} displayDetails(): void
 }
 
@@ -37,6 +39,7 @@ class Drink #00FFFF extends MenuItem {
 -price: double
 
 +Drink(name: String, size: String)
++setPrice(String size): void
 +getSize(): String
 +getPrice(): double
 +displayDetails(): void
@@ -52,14 +55,17 @@ class Chip #FFDAB9 extends MenuItem {
 
 
 class PremiumTopping #FF7F50 extends Topping {
--isExtra: boolean
-+PremiumTopping(name: String, toppingType: String)
-+isExtra(): boolean
+-sandwichSize: String
+-price: double
++PremiumTopping(name: String, toppingType: String, isExtra: boolean, sandwichSize: String)
++setPrice(String toppingType, String sandwichSize): void
++getPrice(): double
++getSandwichSize(): String
++getTotalPrice(): double
 +displayDetails(): void
 }
 
 class RegularTopping #FF7F50 extends Topping {
--isExtra: boolean
 +RegularTopping(name: String, toppingType: String, isExtra: boolean)
 +displayDetails(): void
 }

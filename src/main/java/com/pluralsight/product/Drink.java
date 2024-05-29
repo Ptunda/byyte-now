@@ -1,6 +1,6 @@
 package com.pluralsight.product;
 
-public class Drink extends MenuItem{
+public class Drink extends MenuItem {
 
     private final String size;
     private double price;
@@ -9,28 +9,40 @@ public class Drink extends MenuItem{
         super(name);
         this.size = size;
 
-        if (size.equalsIgnoreCase("small")){
+        setPrice(size);
 
-            this.price = 2.00;
+    }
 
-        } else if (size.equalsIgnoreCase("medium")) {
+    private void setPrice(String size) {
 
-            this.price = 2.50;
+        switch (size.toLowerCase()) {
 
-        } else if (size.equalsIgnoreCase("large")) {
-
-            this.price = 3.00;
+            case "small":
+                this.price = 2.00;
+                break;
+            case "medium":
+                this.price = 2.50;
+                break;
+            case "large":
+                this.price = 3.00;
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid size: " + size);
 
         }
 
     }
 
     public String getSize() {
+
         return size;
+
     }
 
     public double getPrice() {
+
         return price;
+
     }
 
     @Override
