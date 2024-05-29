@@ -5,11 +5,9 @@ package com.pluralsight.product{
 
 abstract class MenuItem #lightblue{
 -name: String
--price: double
 
-+MenuItem(name: String, price: double)
++MenuItem(name: String)
 +getName(): String
-+getPrice(): double
 +{abstract} displayDetails(): void
 
 }
@@ -20,7 +18,7 @@ class Sandwich #DEB887 extends MenuItem{
 -toppings: List<Topping>
 -isToasted: boolean
 
-+Sandwich(name: String, price: double, size: String, breadType: String, isToasted: boolean)
++Sandwich(name: String, size: String, breadType: String, isToasted: boolean)
 +customize(): void
 +addTopping(Topping topping): void
 +calculatePrice(): double
@@ -29,45 +27,45 @@ class Sandwich #DEB887 extends MenuItem{
 
 abstract class Topping #F0E68C extends MenuItem {
 -toppingType: String
-+Topping(name: String, price: double, toppingType: String)
++Topping(name: String, toppingType: String)
 +{abstract} displayDetails(): void
 }
 
 class Drink #00FFFF extends MenuItem {
 -size: String
 
-+Drink(name: String, price: double, size: String)
++Drink(name: String, size: String)
 +displayDetails(): void
 }
 
 class Chip #FFDAB9 extends MenuItem {
-+Chip(name: String, price: double)
++Chip(name: String)
 +displayDetails(): void
 }
 
 
 class PremiumTopping #FF7F50 extends Topping {
 -isExtra: boolean
-+PremiumTopping(name: String, price: double, toppingType: String)
++PremiumTopping(name: String, toppingType: String)
 +isExtra(): boolean
 +displayDetails(): void
 }
 
 class RegularTopping #FF7F50 extends Topping {
 -isExtra: boolean
-+RegularTopping(name: String, price: double, toppingType: String, isExtra: boolean)
++RegularTopping(name: String, toppingType: String, isExtra: boolean)
 +displayDetails(): void
 }
 
 class Sauces #91A3B0 extends RegularTopping{
 
-+Sauces(name: String, price: double, toppingType: String, isExtra: boolean)
++Sauces(name: String, toppingType: String, isExtra: boolean)
 
 }
 
 class Sides #91A3B0 extends RegularTopping{
 
-+Sides(name: String, price: double, toppingType: String, isExtra: boolean)
++Sides(name: String, toppingType: String, isExtra: boolean)
 }
 
 
