@@ -28,6 +28,7 @@ class Sandwich #DEB887 extends MenuItem{
 abstract class Topping #F0E68C extends MenuItem {
 -toppingType: String
 +Topping(name: String, toppingType: String)
++getToppingType(): String
 +{abstract} displayDetails(): void
 }
 
