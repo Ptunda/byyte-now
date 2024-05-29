@@ -128,23 +128,23 @@ class SalesReport extends Report {
 }
 
 class Menu {
-List<Sandwich> sandwiches
-List<Drink> drinks
-List<Chip> chips
-List<Topping> toppings
+-sandwiches: List<Sandwich>
+-drinks: List<Drink>
+-chips: List<Chip>
+-toppings: List<Topping>
 
 + Menu()
-+void updatePrices()
-+List<Sandwich> getSandwiches()
-+List<Drink> getDrinks()
-+List<Chip> getChips()
-List<Topping> getToppings()
++updatePrices(): void
++getSandwiches(): List<Sandwich>
++getDrinks(): List<Drink>
++getChips(): List<Chip>
++getToppings(): List<Topping>
 }
 
-class DatabaseManager {
+class ByyteNowFileManager {
 +saveOrder(Order order): void
-+Menu loadMenu()
-+Order retrieveOrder(int orderID)
++loadMenu(): Menu
++retrieveOrder(int orderID): Order
 }
 
 
