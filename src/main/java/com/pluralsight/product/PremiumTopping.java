@@ -19,13 +19,13 @@ public class PremiumTopping extends Topping {
     private void setPrice(String toppingType, String sandwichSize) {
         switch (sandwichSize) {
             case "4":
-                price = toppingType.equalsIgnoreCase("Meat") ? 1.00 : 0.75;
+                price = toppingType.equalsIgnoreCase("Meats") ? 1.00 : 0.75;
                 break;
             case "8":
-                price = toppingType.equalsIgnoreCase("Meat") ? 2.00 : 1.50;
+                price = toppingType.equalsIgnoreCase("Meats") ? 2.00 : 1.50;
                 break;
             case "12":
-                price = toppingType.equalsIgnoreCase("Meat") ? 3.00 : 2.25;
+                price = toppingType.equalsIgnoreCase("Meats") ? 3.00 : 2.25;
                 break;
             default:
                 throw new IllegalArgumentException("Invalid sandwich size: " + sandwichSize);
@@ -52,13 +52,13 @@ public class PremiumTopping extends Topping {
         if (isExtra()) {
             switch (sandwichSize) {
                 case "4":
-                    extraPremiumSurcharge = getToppingType().equalsIgnoreCase("Meat") ? 0.50 : 0.30;
+                    extraPremiumSurcharge = getToppingType().equalsIgnoreCase("Meats") ? 0.50 : 0.30;
                     break;
                 case "8":
-                    extraPremiumSurcharge = getToppingType().equalsIgnoreCase("Meat") ? 1.00 : 0.60;
+                    extraPremiumSurcharge = getToppingType().equalsIgnoreCase("Meats") ? 1.00 : 0.60;
                     break;
                 case "12":
-                    extraPremiumSurcharge = getToppingType().equalsIgnoreCase("Meat") ? 1.50 : 0.90;
+                    extraPremiumSurcharge = getToppingType().equalsIgnoreCase("Meats") ? 1.50 : 0.90;
                     break;
             }
         }

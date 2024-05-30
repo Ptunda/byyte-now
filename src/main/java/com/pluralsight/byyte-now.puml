@@ -106,7 +106,7 @@ class Order #FFB6C1 {
 +addDrink(Drink drink): void
 +addChip(Chip chip): void
 +calculateTotal(): double
-+generateReceipt(): void
++generateReceipt(): String
 }
 
 class Customer #FFD700{

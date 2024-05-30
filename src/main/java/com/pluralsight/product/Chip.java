@@ -7,7 +7,7 @@ public class Chip extends MenuItem {
     public Chip(String name) {
 
         super(name);
-        this.price = 1.00;
+        this.price = 1.50;
 
     }
 
