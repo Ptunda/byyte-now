@@ -2,8 +2,8 @@ package com.pluralsight.product;
 
 public class PremiumTopping extends Topping {
 
-    private double price;
     private final String sandwichSize;
+    private double price;
 
     public PremiumTopping(String name, String toppingType, boolean isExtra, String sandwichSize) {
 
@@ -35,7 +35,7 @@ public class PremiumTopping extends Topping {
 
     public double getPrice() {
 
-        return price;
+        return getTotalPrice();
 
     }
 
