@@ -28,9 +28,12 @@ public class ReceiptService {
             }
 
             // Save the receipt to the file using BufferedWriter
-            BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
-            writer.write(order.generateReceipt());
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filename));
+            bufferedWriter.write(order.generateReceipt());
             System.out.println("Receipt saved successfully in " + filename);
+
+            bufferedWriter.flush();
+            bufferedWriter.close();
 
         } catch (IOException e) {
 
