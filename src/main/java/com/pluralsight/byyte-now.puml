@@ -157,6 +157,12 @@ class HomeScreen {
 
 }
 
+class OrderScreen {
+
+-currentOrder: Order
+
++display(): void
+-generateOrderId(): int
 
 }
 
