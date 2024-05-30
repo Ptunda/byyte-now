@@ -118,22 +118,6 @@ class Customer #FFD700{
 +getContactInfo(): String
 }
 
-abstract class Report {
-+abstract void generate()
-}
-
-
-class Receipt {
-Order order
-
-+Receipt(Order order)
-+void generateFile()
-}
-
-class SalesReport extends Report {
-+void generate()
-}
-
 class Menu {
 -sandwiches: List<Sandwich>
 -drinks: List<Drink>
@@ -146,6 +130,7 @@ class Menu {
 +getDrinks(): List<Drink>
 +getChips(): List<Chip>
 +getToppings(): List<Topping>
+
 }
 
 class ByyteNowFileManager {
