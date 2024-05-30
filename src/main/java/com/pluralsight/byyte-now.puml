@@ -118,6 +118,12 @@ class Customer #FFD700{
 +getContactInfo(): String
 }
 
+class ReceiptService{
+
++{static}saveReceipt(Order order): void
+
+}
+
 class Menu {
 -sandwiches: List<Sandwich>
 -drinks: List<Drink>
@@ -141,6 +147,19 @@ class ByyteNowFileManager {
 
 
 }
+
+package com.pluralsight.ui{
+
+
+class HomeScreen {
+
++display(): void
+
+}
+
+
+}
+
 
 }
 
