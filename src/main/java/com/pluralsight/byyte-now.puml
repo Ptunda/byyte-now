@@ -166,6 +166,16 @@ class OrderScreen {
 
 }
 
+class AddSandwichScreen {
+
+-order: Order
+
++AddSandwichScreen(Order order)
++display(): void
+-addToppings(Scanner scanner, Sandwich sandwich): void
+
+}
+
 
 }
 

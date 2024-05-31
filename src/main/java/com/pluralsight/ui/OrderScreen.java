@@ -61,7 +61,9 @@ public class OrderScreen {
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
+
         }
+
     }
 
     private int generateOrderId() {
