@@ -195,6 +195,16 @@ class AddChipScreen {
 }
 
 
+class CheckoutScreen {
+
+- order: Order
+
++CheckoutScreen(Order order)
++display(): void
+
+}
+
+
 
 
 }
