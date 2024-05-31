@@ -185,6 +185,17 @@ class AddDrinkScreen {
 
 }
 
+class AddChipScreen {
+
+-order: Order
+
++AddChipScreen(Order order)
++display(): void
+
+}
+
+
+
 
 }
 
