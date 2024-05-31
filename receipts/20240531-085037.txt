@@ -1,0 +1,9 @@
+Order ID: 246309322
+Customer: Celestin
+
+Items:
+Sandwich: Chicken & Bacon Ranch - $12.0
+Drink: ginger ale - $2.5
+Chip: Kettle cooked chips - $1.5
+
+Total: $16.0

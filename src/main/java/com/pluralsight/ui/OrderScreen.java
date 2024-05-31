@@ -1,7 +1,5 @@
 package com.pluralsight.ui;
 
-import com.pluralsight.product.Chip;
-import com.pluralsight.product.Drink;
 import com.pluralsight.service.Customer;
 import com.pluralsight.service.Order;
 
@@ -16,11 +14,15 @@ public class OrderScreen {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter customer name:");
+        System.out.print("Enter customer full name: ");
         String name = scanner.nextLine().trim();
 
-        System.out.println("Enter customer contact info:");
-        String contactInfo = scanner.nextLine().trim();
+        System.out.println("Enter customer contact info");
+        System.out.print("Email address (e.g., jsmith@example.com): ");
+        String emailAddress = scanner.nextLine().trim();
+        System.out.print("Phone number (e.g., 800-555-1234): ");
+        String phoneNumber = scanner.nextLine().trim();
+        String contactInfo = emailAddress + ", " + phoneNumber;
 
         Customer customer = new Customer(name, contactInfo);
         currentOrder = new Order(generateOrderId(), customer);

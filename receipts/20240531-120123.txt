@@ -1,0 +1,9 @@
+Order ID: 257990626
+Customer: Paul Tunda
+
+Items:
+Sandwich: Chicken & Bacon Ranch - $16.0
+Drink: pepsi - $3.0
+Chip: Classic potato chips - $1.5
+
+Total: $20.5
