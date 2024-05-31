@@ -176,6 +176,15 @@ class AddSandwichScreen {
 
 }
 
+class AddDrinkScreen {
+
+-order: Order
+
++AddDrinkScreen(Order order)
++display(): void
+
+}
+
 
 }
 
