@@ -209,5 +209,13 @@ class CheckoutScreen {
 
 }
 
+class Program {
+
++main()
+
+}
+
+}
+
 
 @enduml
