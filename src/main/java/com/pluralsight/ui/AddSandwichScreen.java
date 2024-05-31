@@ -72,7 +72,7 @@ public class AddSandwichScreen {
             } else {
 
                 System.out.println("Enter topping name:");
-                String toppingName = scanner.nextLine().trim();
+                String toppingName = scanner.nextLine().toLowerCase().trim();
 
                 boolean isExtra = false;
 

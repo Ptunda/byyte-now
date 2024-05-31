@@ -1,0 +1,9 @@
+Order ID: 212534428
+Customer: Paul Tunda
+
+Items:
+Sandwich: Classic Club - $18.25
+Drink: lemonade - $2.5
+Chip: Classic potato chips - $1.5
+
+Total: $22.25

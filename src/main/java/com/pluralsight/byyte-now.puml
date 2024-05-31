@@ -118,31 +118,10 @@ class Customer #FFD700{
 +getContactInfo(): String
 }
 
-class ReceiptService{
+class ReceiptService #778899 {
 
 +{static}saveReceipt(Order order): void
 
-}
-
-class Menu {
--sandwiches: List<Sandwich>
--drinks: List<Drink>
--chips: List<Chip>
--toppings: List<Topping>
-
-+ Menu()
-+updatePrices(): void
-+getSandwiches(): List<Sandwich>
-+getDrinks(): List<Drink>
-+getChips(): List<Chip>
-+getToppings(): List<Topping>
-
-}
-
-class ByyteNowFileManager {
-+saveOrder(Order order): void
-+loadMenu(): Menu
-+retrieveOrder(int orderID): Order
 }
 
 
@@ -151,13 +130,13 @@ class ByyteNowFileManager {
 package com.pluralsight.ui{
 
 
-class HomeScreen {
+class HomeScreen #silver {
 
 +display(): void
 
 }
 
-class OrderScreen {
+class OrderScreen #663399 {
 
 -currentOrder: Order
 
@@ -166,7 +145,7 @@ class OrderScreen {
 
 }
 
-class AddSandwichScreen {
+class AddSandwichScreen #F4A460 {
 
 -order: Order
 
@@ -176,7 +155,7 @@ class AddSandwichScreen {
 
 }
 
-class AddDrinkScreen {
+class AddDrinkScreen #F0FFFF {
 
 -order: Order
 
@@ -185,7 +164,7 @@ class AddDrinkScreen {
 
 }
 
-class AddChipScreen {
+class AddChipScreen #FFEBCD {
 
 -order: Order
 
@@ -195,7 +174,7 @@ class AddChipScreen {
 }
 
 
-class CheckoutScreen {
+class CheckoutScreen #ADFF2F {
 
 - order: Order
 
@@ -209,7 +188,7 @@ class CheckoutScreen {
 
 }
 
-class Program {
+class Program #red {
 
 +main()
 
