@@ -141,6 +141,8 @@ class OrderScreen #663399 {
 -currentOrder: Order
 
 +display(): void
+-isValidEmail(email: String ): boolean
+-isValidPhoneNumber(phoneNumber: String ): boolean
 -generateOrderId(): int
 
 }
