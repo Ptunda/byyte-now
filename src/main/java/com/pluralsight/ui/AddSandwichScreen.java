@@ -19,12 +19,12 @@ public class AddSandwichScreen {
         Scanner scanner = new Scanner(System.in);
 
         String[] sandwiches = {
-                "Name: Classic Club\nBread: White\nMeats: Ham, Chicken, Bacon\nCheese: Swiss\nRegular Toppings: Lettuce, Tomatoes, Onions\nSauces: Mayo\nSides: Chips, Coleslaw",
+                "Name: Classic Club\nBread: White\nMeats: Ham, Chicken, Bacon\nCheese: Swiss\nRegular Toppings: Lettuce, Tomatoes, Onions\nSauces: Mayo\nSides: au jus, Coleslaw",
                 "Name: Italian Delight\nBread: Wheat\nMeats: Salami, Ham, Roasted Beef\nCheese: Provolone\nRegular Toppings: Peppers, Cucumbers, Pickles\nSauces: Vinaigrette\nSides: Pasta Salad, Garlic Bread",
                 "Name: Veggie Supreme\nBread: Rye\nCheese: Provolone\nRegular Toppings: Peppers, Cucumbers, Pickles\nSauces: Vinaigrette\nSides: Fruit Salad, Hummus",
                 "Name: Spicy Chicken Ranch\nBread: Wrap\nMeats: Chicken, Bacon\nCheese: American\nRegular Toppings: Lettuce, Onions, Jalapenos\nSauces: Ranch\nSides: Fries, Coleslaw",
                 "Name: Steak & Cheese\nBread: White\nMeats: Steak\nCheese: Cheddar\nRegular Toppings: Onions, Peppers, Mushrooms\nSauces: Thousand Islands\nSides: Onion Rings, Potato Salad",
-                "Name: Ham & Swiss Delight\nBread: Wheat\nMeats: Ham\nCheese: Swiss\nRegular Toppings: Lettuce, Tomatoes, Cucumbers\nSauces: Mayo\nSides: Chips, Pickle Spear",
+                "Name: Ham & Swiss Delight\nBread: Wheat\nMeats: Ham\nCheese: Swiss\nRegular Toppings: Lettuce, Tomatoes, Cucumbers\nSauces: Mayo\nSides: au jus, Pickle Spear",
                 "Name: Roast Beef & Provolone\nBread: Rye\nMeats: Roasted Beef\nCheese: Provolone\nRegular Toppings: Pickles, Onions, Tomatoes\nSauces: Mustard\nSides: Potato Salad, Coleslaw",
                 "Name: Chicken & Bacon Ranch\nBread: Wrap\nMeats: Chicken, Bacon\nCheese: American\nRegular Toppings: Lettuce, Tomatoes, Jalapenos\nSauces: Ranch\nSides: Fries, Pickle Spear"
         };
@@ -103,7 +103,7 @@ public class AddSandwichScreen {
 
         String name = getValidInput(scanner, "Enter sandwich name:", sandwichNames, sandwichNamesKeys);
         String breadType = getValidInput(scanner, "Select your bread type:", breadTypeNames, breadTypeNamesKeys);
-        String size = getValidInput(scanner, "Select sandwich size:", breadSizesNames, breadSizesNamesKeys);
+        String size = getValidInput(scanner, "Select sandwich size:\n4\" -> $5.50\n8\" -> $7.00\n12\" -> $8.50\n", breadSizesNames, breadSizesNamesKeys);
 
         System.out.println("Would you like the sandwich toasted? (yes/no)");
         boolean isToasted = scanner.nextLine().trim().equalsIgnoreCase("yes");
@@ -111,7 +111,7 @@ public class AddSandwichScreen {
         Sandwich sandwich = new Sandwich(name, size, breadType, isToasted);
 
         // Custom sandwich options
-        System.out.println("Available Meats: " + meats);
+        System.out.println("\nAvailable Meats: " + meats);
         System.out.println("Available Cheeses: " + cheeses);
         System.out.println("Available Regular Toppings: " + regularToppings);
         System.out.println("Available Sauces: " + sauces);
@@ -142,7 +142,7 @@ public class AddSandwichScreen {
         boolean addingToppings = true;
 
         while (addingToppings) {
-            System.out.println("Add a topping (meats, cheese, regular, sauce, side) or type 'done' to finish:");
+            System.out.println("\nAdd a topping type \nmeats\ncheese\nregular\nsauce\nside\ndone (to finish)");
             String toppingType = scanner.nextLine().trim().toLowerCase();
 
             if (toppingType.equals("done")) {
@@ -150,22 +150,22 @@ public class AddSandwichScreen {
             } else {
                 switch (toppingType) {
                     case "meats":
-                        System.out.println("Available Meats: " + meats);
+                        System.out.println("\nAvailable Meats: " + meats);
                         break;
                     case "cheese":
-                        System.out.println("Available Cheeses: " + cheeses);
+                        System.out.println("\nAvailable Cheeses: " + cheeses);
                         break;
                     case "regular":
-                        System.out.println("Available Regular Toppings: " + regularToppings);
+                        System.out.println("\nAvailable Regular Toppings: " + regularToppings);
                         break;
                     case "sauce":
-                        System.out.println("Available Sauces: " + sauces);
+                        System.out.println("\nAvailable Sauces: " + sauces);
                         break;
                     case "side":
-                        System.out.println("Available Sides: " + sides);
+                        System.out.println("\nAvailable Sides: " + sides);
                         break;
                     default:
-                        System.out.println("Unknown topping type. Please enter a valid topping type.");
+                        System.out.println("\nUnknown topping type. Please enter a valid topping type.");
                         continue;
                 }
 

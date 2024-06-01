@@ -154,7 +154,7 @@ class AddSandwichScreen #F4A460 {
 +AddSandwichScreen(Order order)
 +display(): void
 -getValidInput( scanner: Scanner, prompt: String, map: HashMap<String, String>, keys: Set<String>): String
--addToppings(Scanner scanner, Sandwich sandwich): void
+-addToppings(scanner: Scanner, sandwich: Sandwich, meats: Set<String>, cheeses: Set<String>, regularToppings: Set<String>, sauces: Set<String>, sides: Set<String>): void
 
 }
 

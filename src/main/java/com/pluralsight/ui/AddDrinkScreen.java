@@ -3,7 +3,9 @@ package com.pluralsight.ui;
 import com.pluralsight.product.Drink;
 import com.pluralsight.service.Order;
 
+import java.util.HashMap;
 import java.util.Scanner;
+import java.util.Set;
 
 
 public class AddDrinkScreen {
@@ -34,8 +36,29 @@ public class AddDrinkScreen {
         System.out.println("Enter drink name:");
         String name = scanner.nextLine().toLowerCase().trim();
 
-        System.out.println("Select drink size: (small, medium, large)");
+        HashMap<String, String> drinkSize = new HashMap<>();
+        drinkSize.put("small", "$2.00");
+        drinkSize.put("medium", "$2.50");
+        drinkSize.put("large", "$3.00");
+
+        Set<String> sizeKeys = drinkSize.keySet();
+
+        System.out.println("\nAvailable drink sizes and prices");
+
+        for (String sizeKey : sizeKeys) {
+
+            System.out.print(sizeKey + " = ");
+            System.out.println(drinkSize.get(sizeKey));
+
+        }
+
+        System.out.println("\nSelect a drink size\nsmall\nmedium\nlarge");
         String size = scanner.nextLine().toLowerCase().trim();
+
+        // validate user input
+        if (!drinkSize.containsKey(size)){
+            return;
+        }
 
         Drink drink = new Drink(name, size);
         order.addDrink(drink);
