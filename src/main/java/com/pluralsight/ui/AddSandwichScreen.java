@@ -37,6 +37,14 @@ public class AddSandwichScreen {
         }
 
         System.out.println("Enter sandwich name:");
+        String[] sandwichNames = {"Classic Club", "Italian Delight", "Veggie Supreme", "Spicy Chicken Ranch", "Steak & Cheese",
+                "Ham & Swiss Delight", "Roast Beef & Provolone", "Chicken & Bacon Ranch"};
+
+        for (int i = 1; i <= sandwiches.length; i++) {
+
+            System.out.println(i + " - " + sandwichNames[i-1]);
+
+        }
         String name = scanner.nextLine().trim();
 
         System.out.println("Select your bread type: (white, wheat, rye, or wrap)");

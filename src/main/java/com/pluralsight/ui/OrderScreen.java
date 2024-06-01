@@ -16,7 +16,7 @@ public class OrderScreen {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter customer full name: ");
+        System.out.print("Enter customer full name (e.g., John Smith): ");
         String name = scanner.nextLine().trim();
 
         // Validate email address
@@ -33,7 +33,7 @@ public class OrderScreen {
 
             } else {
 
-                System.out.println("Invalid email format. Please try again.");
+                System.out.println("Invalid email input. Please try again.");
 
             }
         }
@@ -52,7 +52,7 @@ public class OrderScreen {
 
             } else {
 
-                System.out.println("Invalid phone number format. Please try again.");
+                System.out.println("Invalid phone number input. Please try again.");
 
             }
         }
