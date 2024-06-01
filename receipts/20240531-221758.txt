@@ -1,0 +1,7 @@
+Order ID: 26585516
+Customer: Paul Tunda
+
+Items:
+Sandwich: Classic Club - $7.0
+
+Total: $7.0

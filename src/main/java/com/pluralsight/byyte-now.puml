@@ -153,6 +153,7 @@ class AddSandwichScreen #F4A460 {
 
 +AddSandwichScreen(Order order)
 +display(): void
+-getValidInput( scanner: Scanner, prompt: String, map: HashMap<String, String>, keys: Set<String>): String
 -addToppings(Scanner scanner, Sandwich sandwich): void
 
 }
