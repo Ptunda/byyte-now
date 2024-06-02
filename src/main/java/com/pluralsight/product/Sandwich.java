@@ -10,7 +10,7 @@ public class Sandwich extends MenuItem {
     private String breadType;
     private final List<Topping> toppings;
     private boolean isToasted;
-    private double price;
+    private double basePrice;
 
     public Sandwich(String name, String size, String breadType, boolean isToasted) {
         super(name);
@@ -46,22 +46,26 @@ public class Sandwich extends MenuItem {
     public void setPrice(String size) {
 
         switch (size) {
-
             case "4":
-                price = 5.50;
+                basePrice = 5.50;
                 break;
             case "8":
-                price = 7.00;
+                basePrice = 7.00;
                 break;
             case "12":
-                price = 8.50;
+                basePrice = 8.50;
                 break;
             default:
                 throw new IllegalArgumentException("Invalid sandwich size: " + size);
-
         }
 
     }
+
+
+    public double getBasePrice() {
+        return basePrice;
+    }
+
 
     public double getPrice() {
 
@@ -97,9 +101,16 @@ public class Sandwich extends MenuItem {
     }
 
 
+    public List<Topping> getToppings() {
+
+        return toppings;
+
+    }
+
+
     public double calculatePrice() {
 
-        double totalPrice = price;
+        double totalPrice = basePrice;
 
         for (Topping topping : toppings) {
 

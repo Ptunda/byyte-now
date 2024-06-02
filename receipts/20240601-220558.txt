@@ -1,0 +1,21 @@
+Order ID: 112129546
+Customer: Paul Tunda
+
+Items:
+Sandwich: Classic Club - white - 12 - is toasted - Base Price: $8.5
+Toppings:
+  - ham (meats) - $4.5 (Extra)
+  - chicken (meats) - $3.0
+  - bacon (meats) - $3.0
+  - swiss (cheese) - $3.15 (Extra)
+  - lettuce (regular) - Included
+  - tomatoes (regular) - Included
+  - onions (regular) - Included
+  - mayo (sauce) - Included
+  - au jus (side) - Included
+Total Price for Classic Club: $22.15
+
+Drink: pepsi - $3.0
+Chip: Classic potato chips - $1.5
+
+Total: $26.65

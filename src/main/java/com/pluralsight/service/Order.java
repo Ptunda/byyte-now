@@ -1,8 +1,6 @@
 package com.pluralsight.service;
 
-import com.pluralsight.product.Chip;
-import com.pluralsight.product.Drink;
-import com.pluralsight.product.Sandwich;
+import com.pluralsight.product.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -105,9 +103,49 @@ public class Order {
 
         for (Sandwich sandwich : sandwiches) {
 
-            receipt.append("Sandwich: ").append(sandwich.getName()).append(" - $").append(sandwich.getPrice()).append("\n");
+            double basePrice = sandwich.getBasePrice();
+            double totalPrice = sandwich.calculatePrice();
+
+            receipt.append("Sandwich: ").append(sandwich.getName()).append(" - ").append(sandwich.getBreadType()).append(" - ").append(sandwich.getSize());
+
+            if (sandwich.isToasted()) {
+
+                receipt.append(" - is toasted");
+
+            }
+
+            receipt.append(" - Base Price: $").append(basePrice).append("\n");
+
+            receipt.append("Toppings:\n");
+
+            for (Topping topping : sandwich.getToppings()) {
+
+                if (topping instanceof PremiumTopping) {
+
+                    PremiumTopping premiumTopping = (PremiumTopping) topping;
+
+                    receipt.append("  - ").append(premiumTopping.getName()).append(" (").append(premiumTopping.getToppingType()).append(") - $")
+                            .append(premiumTopping.getTotalPrice());
+
+                    if (premiumTopping.isExtra()) {
+
+                        receipt.append(" (Extra)");
+
+                    }
+
+                    receipt.append("\n");
+
+                } else if (topping instanceof RegularTopping) {
+
+                    receipt.append("  - ").append(topping.getName()).append(" (").append(topping.getToppingType()).append(") - Included\n");
+                }
+
+            }
+
+            receipt.append("Total Price for ").append(sandwich.getName()).append(": $").append(totalPrice).append("\n\n");
 
         }
+
 
         for (Drink drink : drinks) {
 
