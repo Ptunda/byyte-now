@@ -3,6 +3,8 @@ package com.pluralsight.ui;
 import com.pluralsight.product.Chip;
 import com.pluralsight.service.Order;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -20,8 +22,11 @@ public class AddChipScreen {
 
         Scanner scanner = new Scanner(System.in);
 
-        String[] chips = {"Classic potato chips", "Kettle cooked chips", "Tortilla chips", "Veggie chips"};
-
+        List<String> chips = new ArrayList<>();
+        chips.add("Classic potato chips");
+        chips.add("Kettle cooked chips");
+        chips.add("Tortilla chips");
+        chips.add("Veggie chips");
 
         System.out.println("--------Byyte Now Chips---------");
 
@@ -31,8 +36,16 @@ public class AddChipScreen {
 
         }
 
-        System.out.println("Enter chip name:");
+        System.out.println("\nEnter chips name:");
         String name = scanner.nextLine().trim();
+
+        // validate user input
+        if (!chips.contains(name)){
+
+            System.out.println("Invalid input. Please enter correct chips name");
+            return;
+
+        }
 
         Chip chip = new Chip(name);
         order.addChip(chip);
