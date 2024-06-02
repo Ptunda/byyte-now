@@ -29,6 +29,7 @@ public class AddChipScreen {
         chips.add("Veggie chips");
 
         System.out.println("--------Byyte Now Chips---------");
+        System.out.println("*Get any chips for $1.50*");
 
         for (String chip : chips) {
 
