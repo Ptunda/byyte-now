@@ -4,7 +4,10 @@
 
 Byyte Now is a Java POS application designed to streamline the process of ordering sandwiches, drinks, and chips. The application allows users to customize their sandwiches with various toppings, choose their preferred drinks, and add chips to their order. It aims to enhance the ordering experience by providing an easy-to-use interface for creating and managing orders. The intended users are sandwich shop customers who want a quick and efficient way to place their orders.
 
-![Class Diagram]
+<figure>
+  <img src = "byyte-now-final.png">
+  <figcaption><i>Class Diagram</i></figcaption>
+</figure>
 
 ## User Stories
 
@@ -32,14 +35,8 @@ Follow these steps to get your application running within IntelliJ IDEA:
 
 ## Technologies Used
 
-- Java 11: The application is built using Java 11.
-- No additional libraries or frameworks are used.
-
-## Demo
-
-Include screenshots or GIFs that show your application in action. Use tools like [Giphy Capture](https://giphy.com/apps/giphycapture) to record a GIF of your application.
-
-![Application Screenshot](path/to/your/screenshot.png)
+- Java 22.
+- Intellij IDEA
 
 ## Future Work
 
@@ -52,16 +49,10 @@ Potential future enhancements or functionalities:
 
 ## Resources
 
-List of resources that helped during the project:
-
-- [Java Programming Tutorial](https://www.example.com)
-- [Effective Java](https://www.example.com)
-
-## Team Members
-
-- **[Your Name]** - Project development, coding, and documentation.
+- <a href="https://www.w3schools.com/java/" hreflang="en" target="_blank"> w3schools</a>
+- <a href="https://www.amazon.com/Think-Java-Like-Computer-Scientist/dp/1492072508/ref=sr_1_1?crid=1XNHDEIULUJZ2&dib=eyJ2IjoiMSJ9.d0t0lx-6QJg-JsjxgIYcxMppCLgV11zcjSPrvRheLJcf1JZHTqUbSaQBIe7_ApyaFLlf8g9t8VSatCSplBQui7jl12-njNw3WFfsNv0rxERZpeRoHVasN3f-W1she4ZeGSu4GpW0UMr69WQoARTE2tbZ8UOHk2VJcC5XpeOL9k47Lr-Q9rEDiMF40-r-T-Gh0qaIcX1uMU3tY8sNjtmE7NijWBXqLD5GolLveWbWA08.lciBh_nLC7cX0HQKjArI7puLVg9STTtj3OMe6v_45eM&dib_tag=se&keywords=think+java&qid=1715817869&sprefix=think+java%2Caps%2C206&sr=8-1" hreflang="en" target="_blank">Think Java</a>
 
 ## Thanks
 
-- Thank you to [Mentor's Name] for continuous support and guidance.
+- Thank you to Raymond for continuous support and guidance.
 - A special thanks to all teammates for their dedication and teamwork.
