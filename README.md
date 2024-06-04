@@ -33,6 +33,13 @@ Follow these steps to get your application running within IntelliJ IDEA:
 4. Find the main class `Program.java` located in the `com.pluralsight` package.
 5. Right-click on the file and select 'Run 'Program.main()'' to start the application.
 
+## DEMO
+
+<figure>
+  <img src = "Screenshot 2024-06-04 190650.png">
+  <figcaption><i>Receipt screenshot</i></figcaption>
+</figure>
+
 ## Technologies Used
 
 - Java 22.
