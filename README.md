@@ -5,7 +5,7 @@
 Byyte Now is a Java POS application designed to streamline the process of ordering sandwiches, drinks, and chips. The application allows users to customize their sandwiches with various toppings, choose their preferred drinks, and add chips to their order. It aims to enhance the ordering experience by providing an easy-to-use interface for creating and managing orders. The intended users are sandwich shop customers who want a quick and efficient way to place their orders.
 
 <figure>
-  <img src = "byyte-now-class-diagram.png">
+  <img src = "byyte-now-class-diagram.png" height="500px">
   <figcaption><i>Class Diagram</i></figcaption>
 </figure>
 
@@ -36,7 +36,7 @@ Follow these steps to get your application running within IntelliJ IDEA:
 ## DEMO
 
 <figure>
-  <img src = "Screenshot 2024-06-04 190650.png">
+  <img src = "Screenshot 2024-06-04 190650.png" height="500px">
   <figcaption><i>Receipt screenshot</i></figcaption>
 </figure>
 
